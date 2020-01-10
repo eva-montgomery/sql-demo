@@ -33,3 +33,13 @@ select title from albums order by artist limit 2; -- "order by" must come before
 
 select * from albums order by artist; -- how do I do case insensitive ordering?
 -- select * from albums order by artist collate nocase; -- why no worky?
+
+---- demo of foreign keys (20200110)
+select id from artists where name ilike 'miles%'
+
+select * from albums where artist_id=1;
+
+-- show me the title of only 1 album of miles davis'
+select title from albums where artist_id=1 limit 1;
+
+
